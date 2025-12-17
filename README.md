@@ -25,6 +25,10 @@
 - アプリケーションを実行するためのキーを作成  
   docker-compose exec php bash  
   php artisan key:generate
+- Fortifyの導入
+  docker-compose exec php bash
+  composer require laravel/fortify
+  php artisan vendor:publish --provider="Laravel\Fortify\FortifyServiceProvider"
 - マイグレーション実行  
   docker-compose exec php bash  
   php artisan migrate
