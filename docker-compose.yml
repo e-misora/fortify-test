@@ -18,6 +18,10 @@ services:
 
   mysql:
     image: mysql:8.0.26
+    ### macos のため下記を追加
+    platform:
+      linux/amd64
+    ### macos のため上記を追加
     environment:
       MYSQL_ROOT_PASSWORD: root
       MYSQL_DATABASE: laravel_db
